@@ -7,9 +7,7 @@ const TaskForm = props => {
   const submitHandler = event => {
     event.preventDefault();
     const enteredTask = taskInputRef.current.value;
-    if (enteredTask.trim().length > 0) {
-      props.onEnterTask(enteredTask);
-    }
+    if (enteredTask.trim().length > 0) props.onEnterTask(enteredTask);
     taskInputRef.current.value = "";
   };
 
